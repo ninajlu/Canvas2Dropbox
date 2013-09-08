@@ -3,14 +3,16 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 import time
 import sys
-print 'Number of arguments:', len(sys.argv), 'arguments.'
-sys.argv.pop(0)
-print 'Number of arguments:', len(sys.argv), 'arguments.'
-for arg in sys.argv:
+
+def download(address):
+	#print 'Number of arguments:', len(sys.argv), 'arguments.'
+	#sys.argv.pop(0)
+	#print 'Number of arguments:', len(sys.argv), 'arguments.'
+	#for arg in sys.argv:
 
 	browser = webdriver.Chrome() # Get local session of firefox
-	print arg
-	browser.get(arg) # Load page
+	print address
+	browser.get(address) # Load page
 	#assert "Yahoo!" in browser.title
 	#elem = browser.find_element_by_name("p") # Find the query box
 	#elem.send_keys("seleniumhq" + Keys.RETURN)
